@@ -1,8 +1,11 @@
-// 타입스크립트를 위한 주석
 /** @type {import('next').NextConfig} */
+// ^ comment for typescript
 const nextConfig = {
   reactStrictMode: true,
-  // swcMinify: true -> v13이후로 기본 설정으로 바뀜
+  // swcMinify: true -> it's changed to default option after v13.
+  compiler: {
+    styledComponents: true,
+  },
 };
 
 module.exports = nextConfig;
